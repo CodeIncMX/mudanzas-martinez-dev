@@ -1,0 +1,81 @@
+/* GENERAL */
+$max-viewport-height: calc(var(--vh, 1vh) * 100);
+
+$mobile-side-margin: 15px;
+$max-width-tablet: 750px;
+$max-width-desktop: 970px;
+$max-width-desktop-large: 1170px;
+
+$capa-1: 100;
+$capa-2: 200;
+
+$primary-font: 'Poppins';
+
+$white-color:#fff;
+$whitish-color: #CBCBCB;
+$gray-color:#959595;
+$darken-gray-color:#6b6767;
+$red-color: #C31610;
+$second-red-color:#D72F2B;
+$ligther-red:#F7D5D4;
+$orangetish-color: #F7251E;
+$black-color: #1E1F21;
+$green-color: #3D7552;
+
+$red-gradient: linear-gradient(to bottom, $red-color, $ligther-red);
+$red-gradient-inverted: linear-gradient(to bottom, $ligther-red, $red-color);
+
+$general-shadow: -5px -5px 5px rgba(0,0,0, 0.2);
+$general-shadow-inset: inset 0 0 5px rgba(0,0,0, 0.2);
+$general-shadow-down: 5px 0 5px rgba(0,0,0, 0.2);
+$general-shadow-inverted: 5px 5px 5px rgba(0,0,0, 0.35);
+
+/* HEADER */
+$header-height: 50px;
+$logo-width: 150px;
+$logo-heigth: 69px;
+$menu-icon-size: 26px;
+$dropdown-menu-time-animation: 0.9s;
+
+/* START */
+$start-tansition-delay: 0.5s; //must be > 2s see AUTO GENERATED $start-logo-transition
+$start-transition-duration: 1.5s; // must be > 0.5s see AUTO GENERATED $start-logo-transition
+
+/* HERO */
+$hero-transition-duration: 0.8s;
+
+$photo-plusmargin-left: 10px;
+
+$social-bar-width: 55px;
+$social-media-bar-width: 50px;
+$social-media-bar-height: 150px;
+$social-media-bar-border-radius: 30px;
+$social-media-bar-font-size: 18px;
+
+/* BUDGET FORM */
+$form-height: 520px;
+$input-height: 35px;
+$large-input-height: 90px;
+
+/* FEATURES */
+$item-opacity: .7;
+$item-background-color:$orangetish-color;
+
+/* BUTTON */
+$button-border-radius: 5px;
+$button-height: 45px;
+
+/* AUTO GENERATED */
+$page-top: calc( ( #{$header-height} / 2 ) - (#{$menu-icon-size} / 2) );
+
+$tablet-side-margin: calc( ( 100vw - #{$max-width-tablet} ) / 2 );
+$desktop-side-margin: calc( ( 100vw - #{$max-width-desktop} ) / 2 );
+$desktop-large-side-margin: calc( ( 100vw - #{$max-width-desktop-large} ) / 2 );
+
+$start-logo-transition: all calc( #{$start-transition-duration} - 1s ) ease-in calc( #{$start-tansition-delay} - 0.5s);
+
+$hero-transition: all $hero-transition-duration ease $start-tansition-delay;
+$hero-form-transition: all $hero-transition-duration ease calc(#{$start-tansition-delay} + 0.7s);
+$hero-photo-left: calc( #{$mobile-side-margin} + #{$photo-plusmargin-left});
+$menu-item-transition-leave: all calc(#{$dropdown-menu-time-animation} - 0.5s) ease-in; 
+$menu-item-transition-enter: all calc(#{$dropdown-menu-time-animation} + 0.3s) ease-out; 

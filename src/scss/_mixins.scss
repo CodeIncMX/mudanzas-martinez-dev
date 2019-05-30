@@ -1,0 +1,84 @@
+@import './src/scss/variables.scss';
+
+/* Search for retina or noral image in an specific folder */
+@mixin background-image($path, $name, $ext) {
+    $name1x: "#{$name}.#{$ext}";
+    $name2x: "#{$name}@2x.#{$ext}";
+
+    background-image: url("#{$path}/#{$name1x}");
+    @media 
+        (-webkit-min-device-pixel-ratio: 2), 
+        (min-resolution: 192dpi) {  
+            background-image: url("#{$path}/#{$name2x}");
+        }
+}
+
+/* REUSABLE CODE */
+@mixin mobile-margin{
+    padding: $page-top $mobile-side-margin 0 $mobile-side-margin;
+}
+
+
+/* MEDIA QUERY MIXINS */
+
+@mixin extra-small {
+    @media (max-width: 359.98px ) {
+        @content;
+    }    
+}
+
+@mixin extra-small-up {
+    @media (min-width: 360px ) {
+        @content;
+    }    
+}
+
+
+@mixin mobile-portrait {
+    @media (max-width: 575.98px) { 
+        @content;
+    }
+}
+
+@mixin mobile-landscape {
+    @media (min-width: 576px) and (max-width: 767.98px) {
+        @content;
+     }
+}
+
+@mixin mobile-landscape-up {
+    @media (min-width: 576px) {
+        @content;
+     }
+}
+
+
+@mixin tablet {
+    @media (min-width: 768px) and (max-width: 991.98px)  { 
+        @content;
+    }
+}
+
+@mixin tablet-up {
+    @media (min-width: 768px) { 
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 992px) and (max-width: 1199.98px) { 
+        @content;
+    }
+}
+
+@mixin desktop-up {
+    @media (min-width: 992px) { 
+        @content;
+    }
+}
+
+@mixin desktop-large {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
